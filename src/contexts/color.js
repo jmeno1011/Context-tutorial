@@ -1,12 +1,12 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
 // color : "black" 로 context의 기본상태를 지정함
 const ColorContext = createContext({
   state: { color: "black", subcolor: "red" },
-  actions: { setColor: () => {}, setSubColor: () => {} },
+  actions: { setColor: () => {}, setSubcolor: () => {} },
 });
 
-const ColorProvider = ({ childeren }) => {
+const ColorProvider = ({ children }) => {
   const [color, setColor] = useState("black");
   const [subcolor, setSubcolor] = useState("red");
 
@@ -15,7 +15,9 @@ const ColorProvider = ({ childeren }) => {
     actions: { setColor, setSubcolor },
   };
   return (
-    <ColorContext.Provider value={value}>{childeren}</ColorContext.Provider>
+    <ColorContext.Provider value={value}>
+      {children}
+    </ColorContext.Provider>
   );
 };
 
