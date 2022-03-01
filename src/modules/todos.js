@@ -3,7 +3,7 @@ const INSERT = "todos/INSERT";
 const TOGGLE = "todos/TOGGLE";
 const REMOVE = "todos/REMOVE";
 
-export const changeInput = input({
+export const changeInput = (input) => ({
   type: CHANGE_INPUT,
   input,
 });
@@ -69,3 +69,5 @@ function todos(state = initialState, action) {
       return state;
   }
 }
+
+export default todos;
