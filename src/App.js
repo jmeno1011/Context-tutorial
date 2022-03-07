@@ -3,6 +3,7 @@ import ColorBox from "./components/ColorBox";
 import SelectColors from "./components/SelectColors";
 import Todos from "./components/Todos";
 import CounterContainer from "./containers/CounterContainer";
+import TodosContainer from "./containers/TodosContainer";
 import { ColorProvider } from "./contexts/color";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <h1>Redux</h1>
         <CounterContainer />
         <hr />
-        <Todos />
+        <TodosContainer />
       </div>
     </>
   );
