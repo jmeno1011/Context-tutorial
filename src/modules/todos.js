@@ -46,7 +46,7 @@ const initialState = {
   ],
 };
 
-function Todos(state = initialState, action) {
+function todos(state = initialState, action) {
   switch (action.type) {
     case CHANGE_INPUT:
       return {
@@ -70,4 +70,4 @@ function Todos(state = initialState, action) {
   }
 }
 
-export default Todos;
+export default todos;
