@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import Counter from "../components/Counter";
 import { decrease, increase } from "../modules/counter";
 
-const CounterContainer = ({ number, increase, decrease }) => {
+const CounterContainerAction = ({ number, increase, decrease }) => {
   return (
     <Counter number={number} onIncrease={increase} onDecrease={decrease} />
   );
@@ -20,4 +20,4 @@ export default connect(
     increase,
     decrease,
   }
-)(CounterContainer);
+)(CounterContainerAction);

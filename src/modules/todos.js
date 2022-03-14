@@ -13,7 +13,7 @@ let id = 3;
 
 export const insert = (text) => ({
   type: INSERT,
-  todo: {
+  todos: {
     id: id++,
     text,
     done: false,
